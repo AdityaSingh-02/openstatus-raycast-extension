@@ -1,5 +1,5 @@
-import { ToastComponent } from ".";
+import { Detail } from "@raycast/api";
 
 export default function Command() {
-  return <ToastComponent />;
+  return <Detail markdown="# Hello World!"/>;
 }

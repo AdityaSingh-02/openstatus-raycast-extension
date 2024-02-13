@@ -13,8 +13,62 @@
     {
       "name": "create-status-report",
       "title": "Create Status Report",
-      "description": "",
+      "description": "Status Report",
       "mode": "view"
+    },
+    {
+      "name": "no-view-command",
+      "title": "Notify",
+      "description": "Notify Once Done",
+      "mode": "no-view"
+    },
+    {
+      "name": "arguments",
+      "title": "Arguments",
+      "subtitle": "API Examples",
+      "description": "Demonstrates usage of arguments",
+      "mode": "view",
+      "arguments": [
+        {
+          "name": "title",
+          "placeholder": "Title",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "subtitle",
+          "placeholder": "Secret Subtitle",
+          "type": "password"
+        },
+        {
+          "name": "favoriteColor",
+          "type": "dropdown",
+          "placeholder": "Favorite Color",
+          "required": true,
+          "data": [
+            {
+              "title": "Red",
+              "value": "red"
+            },
+            {
+              "title": "Green",
+              "value": "green"
+            },
+            {
+              "title": "Blue",
+              "value": "blue"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "schedule",
+      "title": "Schedule Refresh Menu Bar",
+      "subtitle": "Hello",
+      "description": "Shows the number of unread notifications in root search",
+      "mode": "no-view",
+      "interval": "24h"
     }
   ],
   "dependencies": {
