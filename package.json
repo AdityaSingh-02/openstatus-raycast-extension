@@ -69,13 +69,27 @@
       "description": "Shows the number of unread notifications in root search",
       "mode": "no-view",
       "interval": "24h"
+    },
+    {
+      "name": "login",
+      "title": "login",
+      "description": "",
+      "mode": "view"
+    },
+    {
+      "name": "monitors",
+      "title": "Show Monitors",
+      "description": "",
+      "mode": "view"
     }
   ],
   "dependencies": {
-    "@raycast/api": "^1.67.0"
+    "@raycast/api": "^1.67.0",
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^1.0.6",
+    "@raycast/utils": "^1.12.4",
     "@types/node": "20.8.10",
     "@types/react": "18.2.27",
     "eslint": "^8.51.0",
