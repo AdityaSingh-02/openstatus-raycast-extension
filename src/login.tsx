@@ -1,4 +1,4 @@
-import { ActionPanel, Form, Action, Detail, List, Icon, popToRoot, showToast } from "@raycast/api";
+import { ActionPanel, Form, Action, Detail, List, Icon, popToRoot, showToast, showHUD } from "@raycast/api";
 import { useEffect, useState } from "react";
 import fetch from "node-fetch";
 import { LocalStorage } from "@raycast/api";
@@ -15,6 +15,7 @@ export default function LoginCommand() {
         .then((response) => response.json())
         .then((response) => {
           LocalStorage.setItem("x-openstatus-key", token).then(() => {});
+          showHUD("Token Added").then(()=>{})
           popToRoot();
         })
         .catch((err) => {
@@ -22,6 +23,8 @@ export default function LoginCommand() {
         });
     }
   }, [token]);
+
+  const icon = "openstatus.";
 
   return (
     <>
